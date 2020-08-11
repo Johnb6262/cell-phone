@@ -9,9 +9,8 @@ import com.johnbickerstaff.data.ProcessData;
  */
 public class Main {
 
-    private static final ProcessData processData = new ProcessData();
-
     public static void main(String[] args) {
+        ProcessData processData = new ProcessData();
 
         FileReader fileReader = new FileReader();
 

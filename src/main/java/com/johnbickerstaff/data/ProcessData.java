@@ -56,7 +56,6 @@ public class ProcessData {
                 tempMonthObject.addToMinutes(additionalMinutes);
                 tempMonthObject.addToData(additionalData);
             } else {// it doesn't exist yet so add it
-                //System.out.println("this is interesting " + month + " : " + detailKey);
                 tempMonthObject = new MonthObject();
                 additionalMinutes = (Integer.parseInt(line[2]));
                 additionalData = (Double.parseDouble(line[3]));
@@ -66,7 +65,6 @@ public class ProcessData {
                 //add tempMonthObject to ...??????
                 detailMap.get(detailKey).getMonthMap().put(month, tempMonthObject);
             }
-            //what if the current month does NOT exist yet?
 
         } else { //The ID has not been added yet
             //create the new header object and set the ID
@@ -82,7 +80,6 @@ public class ProcessData {
 
         //Finally - run the line through Header to add numbers for totals
         header.addToMinutesTotal(Double.parseDouble(line[2]));
-        System.out.println(Double.parseDouble(line[2]));
         header.addToDataTotal(Double.parseDouble(line[3]));
     }
 
